@@ -1,0 +1,337 @@
+/*body setting*/
+body {
+    margin: 0;
+}
+
+:root {
+    --pinkm: #d3a0a085;
+    --pinkList: rgba(205, 92, 92, 0.466);
+    --graytaskback: rgba(255, 255, 255, 0.445);
+    --grayfont: #272727;
+    --backMenuGray: rgba(122, 122, 122, 0.445);
+}
+
+@font-face {
+    font-family: pop;
+    src: url(font/popins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: vib;
+    src: url(font/Great_Vibes/GreatVibes-Regular.ttf);
+}
+
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.notepad {
+  
+    height: 950px;
+   background-image: url(image/backl.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* statrt top menu for notepad*/
+.tpmenu {
+    padding: 10px 5px;
+    display: flex;
+
+}
+
+#menu {
+    margin: 0;
+    padding: 5px 10px;
+}
+
+#menu li {
+    list-style: none;
+    margin: 0 10px;
+    display: inline-block;
+
+
+}
+
+#menu li a {
+    font-family: pop;
+    font-style: italic;
+    border: 1px solid #2c2c2c85;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    background-color: var(--backMenuGray);
+
+}
+
+.navbar {
+    width: 50%;
+}
+
+/*start code for searchbar*/
+
+.searchbar {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+
+}
+
+.rec {
+    justify-content: end;
+    background: -webkit-linear-gradient(50deg, #fff1f194 20%, #f8f0c5b6 60%);
+    display: flex;
+    width: 180px;
+    height: 30px;
+
+
+}
+
+.rec .icon {
+
+    color: rgba(0, 0, 0, 0.808);
+    display: inline-block;
+    padding: 0 4px;
+}
+
+.rec input {
+    width: 144px;
+    display: inline-block;
+    background: -webkit-linear-gradient(50deg, #fff1f188 20%rgba(248, 240, 197, 0.74)c5 60%);
+    height: 27px;
+    border: none;
+    resize: none;
+    outline: navy;
+    color: rgb(63, 63, 63);
+}
+
+
+
+
+/*time */
+.time {
+    margin: 1% 2%;
+}
+.time h2 ,h1{
+    margin: 0%;
+    display: flex;
+}
+.time h2 span{
+    font-size: 20px;
+   
+}
+.time h1 span{
+    font-size: 40px;
+}
+
+/*start code body */
+.toDoList {
+    margin: 3% 0;
+    background-color: rgba(105, 105, 105, 0.466);
+    width: 1200px;
+    height: 850px;
+}
+
+
+.days {
+    display: inline;
+
+
+    display: flex;
+    justify-content: center;
+    flex-direction: ro w;
+    flex-wrap: wrap;
+}
+
+.days div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #2c2c2c85;
+    background-color: var(--pinkm);
+    transition: all .2s;
+}
+
+.days div:hover {
+    transform: scale(0.9);
+
+}
+
+/* start code for type and show todo list */
+.mytodo {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+
+}
+
+.mytodo h3{
+    margin: 10px 4%;
+}
+
+.showToDo {
+    margin: 1% auto;
+    background-color: rgba(255, 255, 255, 0.74);
+    width: 400px;
+    height: 300px;
+}
+
+.days div:target.paper {
+    visibility: visible;
+}
+
+
+/* type todo desgin*/
+
+#taskForm{
+    background-color: var(--graytaskback);
+    width: 500px;
+    height: 430px;
+    margin: 1% auto;
+
+}
+
+
+
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+
+.toptask{
+    display: flex;
+    flex-direction: row;
+}
+#taskType {
+    flex: 1 1 0%;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: var(--pinkList);
+    margin: 0% 9.5%;
+    color: var(--grayfont);
+
+}
+
+#taskType::placeholder {
+    color: var(--grayfont);
+}
+
+#taskSubmit {
+    background: linear-gradient(to right, var(--pinkList), var(--grayfont));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    height: 30px;
+    font-size: 16px;
+    margin: 1% 9.5%;
+    cursor: pointer;
+    transition: all .4s;
+    transition: all .3s;
+}
+
+#taskSubmit:hover {
+    background: linear-gradient(to right, #cc2b2b, var(--pinkm));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.main {
+    flex: 1 1 0%;
+
+}
+
+#tasks{
+    overflow-y: auto;
+		height: 300px;
+		overflow-x: hidden;
+		text-align: left;
+		padding: 5px;
+		box-sizing: border-box;
+		font-family: 'MyriadPro-Regular';
+    padding: 1rem;
+    margin-bottom: 1rem;
+    
+}
+
+
+.content {
+    height: 30px;
+    width: 65%;
+    
+    border-radius: 1ch;
+    display: flex;
+    flex: 1 1 0%;
+
+}
+
+#Task .content .text {
+    
+    color: var(--grayfont);
+    font-size: 12px;
+    font-weight: 800;
+    font-family: pop;
+    width: 100%;
+
+
+}
+
+#tasks #Task .content .text:not(:read-only) {
+    cursor: pointer;
+    
+}
+#tasks #Task .content .text:not(:read-only):active{
+    color: var(--pinkList);
+}
+
+#tasks #Task .action{
+    display: flex;
+    flex-direction:row;
+    margin: 0 -0.5rem;
+    width: 100%;
+
+}
+
+.actions button {
+    cursor: pointer;
+    font-size: 14px;
+    
+    padding: 10px 8px;
+    
+  margin: 1px ;
+}
+
+.delete {
+    color: #cc2b2b;
+    border-left: 1px solid #272727 ;
+}
+.delete:hover{
+    opacity: 0.8;
+}
+
+.edit {
+    color: aliceblue;
+
+}
+.edit:hover{
+    opacity: 0.8;
+}
+
+
+/* code for js desgin*/
+.Task{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: var(--pinkList);
+
+}
